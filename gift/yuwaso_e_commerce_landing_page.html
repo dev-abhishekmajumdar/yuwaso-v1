@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuwaso - Authentic Gifts from Kashmir | Your Wish, Our Solution</title>
+
+    <!-- Google Fonts: Cormorant Garamond, Inter, & Playfair Display, plus Caveat for natural cursive calligraphy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS with custom branding config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0d3429',        /* Exact dark emerald forest green from UI */
+                        'primary-dark': '#08241c',
+                        'primary-hover': '#134e3e',
+                        accent: '#967140',         /* Warm Kashmiri walnut/gold accent */
+                        'accent-dark': '#7d5a2d',
+                        'accent-light': '#b89461',
+                        cream: '#f9f6f0',          /* Light warm background */
+                        'cream-card': '#f7f3eb',
+                        'cream-subtle': '#fbf9f5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'Cormorant Garamond', 'Georgia', 'serif'],
+                        script: ['Caveat', 'cursive'],
+                        cormorant: ['Cormorant Garamond', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Hide scrollbars while retaining fluid horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Distinct arched frame for category showcase */
+        .arch-pill {
+            border-top-left-radius: 9999px;
+            border-top-right-radius: 9999px;
+        }
+
+        /* Micro subtle float animations for badges */
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-subtle-float {
+            animation: float-gentle 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- NAVIGATION BAR (Exact Match to Reference) -->
+    <header class="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3 lg:gap-6">
+            
+            <!-- Yuwaso Logo with colorful ribbon symbol -->
+            <a href="#" class="flex items-center gap-2.5 shrink-0">
+                <svg width="44" height="44" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-sm">
+                    <!-- Ribbon graphic in blue, cyan, orange, yellow -->
+                    <path d="M22 28 C 30 15, 52 20, 60 48 C 68 76, 42 100, 32 86 C 24 74, 38 48, 55 35" stroke="#0077b6" stroke-width="10" stroke-linecap="round" fill="none"/>
+                    <path d="M60 48 C 70 20, 92 18, 98 32 C 104 46, 85 70, 68 85 C 55 96, 48 98, 45 92" stroke="#0096c7" stroke-width="9" stroke-linecap="round" fill="none"/>
+                    <circle cx="60" cy="30" r="14" fill="#f77f00"/>
+                    <path d="M50 35 C 56 22, 70 24, 76 34" stroke="#fcbf49" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-wider text-[#17548f] leading-none">YUWASO</span>
+                    <span class="text-[0.62rem] text-gray-400 font-medium tracking-tight mt-0.5">Your Wish, Our Solution.</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-7 lg:gap-8 text-[13px] font-medium text-gray-700">
+                <a href="#" class="text-gray-900 font-semibold border-b-2 border-gray-900 pb-1">Home</a>
+                <a href="#specialties" class="hover:text-primary transition-colors pb-1">Shop</a>
+                <a href="#hampers" class="hover:text-primary transition-colors pb-1">Hampers</a>
+                <a href="#categories" class="hover:text-primary transition-colors pb-1">Categories</a>
+                <a href="#story" class="hover:text-primary transition-colors pb-1">About</a>
+            </nav>
+
+            <!-- Search Bar Pill Input -->
+            <div class="hidden lg:flex items-center bg-[#f8f9fa] border border-gray-200 rounded-full px-4 py-2 w-72 lg:w-80 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/20 transition-all">
+                <i class="fa-solid fa-magnifying-glass text-gray-400 text-xs mr-2.5"></i>
+                <input type="text" id="siteSearchInput" placeholder="Search for saffron, dry fruits, hampers..." class="bg-transparent text-xs w-full outline-none text-gray-700 placeholder-gray-400 font-normal">
+            </div>
+
+            <!-- Header Right Actions: Wishlist, Cart & Login -->
+            <div class="flex items-center gap-3 sm:gap-4">
+                <!-- Wishlist Heart -->
+                <button onclick="toggleWishlistModal()" class="text-gray-700 hover:text-red-500 transition-colors relative p-1.5" title="Wishlist">
+                    <i class="fa-regular fa-heart text-lg" id="wishlistIcon"></i>
+                    <span id="wishlistCount" class="hidden absolute -top-1 -right-1 bg-red-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">1</span>
+                </button>
+
+                <!-- Cart Icon with counter '2' matching UI -->
+                <button onclick="toggleCartDrawer()" class="text-gray-700 hover:text-primary transition-colors relative p-1.5" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-primary text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+                </button>
+
+                <!-- Login / Sign Up Button -->
+                <button onclick="openAuthModal()" class="hidden sm:inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white text-xs font-medium px-5 py-2.5 rounded-md transition-colors shadow-sm">
+                    Login / Sign Up
+                </button>
+
+                <!-- Mobile Menu Hamburger -->
+                <button onclick="toggleMobileNav()" class="md:hidden text-gray-700 text-xl p-1 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+            <div class="mb-3">
+                <input type="text" placeholder="Search products..." class="w-full bg-gray-50 border border-gray-200 rounded-lg py-2 px-3 text-xs outline-none focus:border-primary">
+            </div>
+            <a href="#" class="block text-sm font-semibold text-primary">Home</a>
+            <a href="#specialties" class="block text-sm text-gray-700">Shop</a>
+            <a href="#hampers" class="block text-sm text-gray-700">Hampers</a>
+            <a href="#categories" class="block text-sm text-gray-700">Categories</a>
+            <a href="#story" class="block text-sm text-gray-700">About</a>
+            <div class="pt-2">
+                <button onclick="openAuthModal()" class="w-full bg-primary text-white text-xs font-semibold py-2.5 rounded-md">
+                    Login / Sign Up
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION (Senior Art Director Polish - Clean, Photorealistic, Full-Bleed Feathered) -->
+    <section class="relative bg-[#faf7f2] overflow-hidden min-h-[520px] lg:min-h-[600px] flex items-center">
+        
+        <!-- Elegant Kashmiri Botanical Leaf Watermark (Top Left) -->
+        <div class="absolute top-0 left-0 w-44 sm:w-56 lg:w-72 pointer-events-none select-none z-10 opacity-75">
+            <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                <path d="M-15 -10 C35 38, 85 72, 155 86 C195 94, 235 90, 245 85" stroke="#d6c6b0" stroke-width="2.2" stroke-linecap="round"/>
+                <!-- Leaf 1 -->
+                <path d="M42 32 C30 18, 56 6, 76 20 C85 29, 71 43, 52 39 Z" fill="#eee5d8" stroke="#cebeaa" stroke-width="1.2"/>
+                <!-- Leaf 2 -->
+                <path d="M88 53 C97 34, 126 36, 137 57 C127 73, 102 72, 88 53 Z" fill="#f3eae0" stroke="#cebeaa" stroke-width="1.2"/>
+                <!-- Leaf 3 -->
+                <path d="M132 76 C153 61, 186 71, 182 96 C162 109, 142 96, 132 76 Z" fill="#eee5d8" stroke="#cebeaa" stroke-width="1.2"/>
+                <!-- Leaf 4 (Subtle bud) -->
+                <path d="M26 67 C16 52, 36 40, 49 52 C46 64, 33 70, 26 67 Z" fill="#f7f0e6" stroke="#cebeaa" stroke-width="1.2"/>
+                <!-- Leaf 5 -->
+                <path d="M178 89 C198 79, 222 91, 217 111 C197 119, 182 106, 178 89 Z" fill="#efe7db" stroke="#cebeaa" stroke-width="1.2"/>
+            </svg>
+        </div>
+
+        <!-- Full-Bleed Right-Side Kashmiri Window & Luxury Hamper Visual with Organic Feathered Clip-Mask -->
+        <div class="hidden lg:block absolute top-0 right-0 bottom-0 w-[58%] xl:w-[61%] h-full z-0 pointer-events-none select-none overflow-hidden"
+             style="mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.2) 6%, rgba(0,0,0,0.8) 18%, black 28%); -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.2) 6%, rgba(0,0,0,0.8) 18%, black 28%);">
+            
+            <div class="relative w-full h-full">
+                <!-- Background Mountain Landscape: Snow-capped Himalayan Peaks & Dal Lake -->
+                <img 
+                    src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1920&q=85" 
+                    alt="Kashmir Himalayan Mountains and Dal Lake" 
+                    class="w-full h-full object-cover object-[65%_35%] filter brightness-[1.02] contrast-[1.03]"
+                >
+
+                <!-- Warm Atmospheric Morning Sunlight Wash & Subtle Vignette -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#201710]/40 via-transparent to-[#1a140f]/25 pointer-events-none"></div>
+
+                <!-- Architectural Wooden Window Frame Surround (Top, Right, Bottom Sill) -->
+                <div class="absolute top-0 right-0 left-0 h-10 bg-gradient-to-b from-[#3b281b]/85 via-[#4a3424]/40 to-transparent pointer-events-none"></div>
+                <div class="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-[#362519]/80 to-transparent pointer-events-none"></div>
+                
+                <!-- Sunlit Window Sill Wooden Base where Hamper Sits -->
+                <div class="absolute bottom-0 left-0 right-0 h-44 bg-gradient-to-t from-[#2d1e13]/95 via-[#3f2b1c]/80 to-transparent pointer-events-none"></div>
+
+                <!-- Seamless Foreground Hamper Composition (Pure Photorealistic Luxury Display) -->
+                <div class="absolute bottom-0 right-0 left-8 h-[370px] xl:h-[410px] flex items-end justify-center pointer-events-auto pb-4 pr-10">
+                    <div class="relative w-full max-w-[650px]">
+                        
+                        <!-- Open Handcrafted Walnut Wood & Kraft Gift Box Display -->
+                        <div class="relative bg-gradient-to-br from-[#f2e6d6] via-[#e7d4bf] to-[#d8be9f] rounded-t-xl p-5 border-t-2 border-x-2 border-[#bfa283] shadow-[0_20px_45px_rgba(25,18,12,0.45)]">
+                            
+                            <!-- Box Lid Backing with Yuwaso Emblem Imprint -->
+                            <div class="absolute -top-16 left-12 right-12 h-20 bg-gradient-to-t from-[#debfa0] via-[#e8d2bb] to-[#f2dfcb] border-t-2 border-x border-[#c2a789] rounded-t-lg shadow-sm flex flex-col items-center justify-center">
+                                <div class="flex items-center gap-2 opacity-85">
+                                    <svg width="22" height="22" viewBox="0 0 120 120" fill="none">
+                                        <path d="M22 28 C 30 15, 52 20, 60 48 C 68 76, 42 100, 32 86 C 24 74, 38 48, 55 35" stroke="#0077b6" stroke-width="12" stroke-linecap="round"/>
+                                        <path d="M60 48 C 70 20, 92 18, 98 32 C 104 46, 85 70, 68 85 C 55 96, 48 98, 45 92" stroke="#0096c7" stroke-width="10" stroke-linecap="round"/>
+                                        <circle cx="60" cy="30" r="14" fill="#f77f00"/>
+                                    </svg>
+                                    <span class="font-bold tracking-[0.25em] text-[#2c1f14] text-[11px] uppercase">YUWASO</span>
+                                </div>
+                                <span class="text-[9px] text-[#6b4e33] font-serif italic mt-0.5 tracking-wide">Your Wish, Our Solution.</span>
+                            </div>
+
+                            <!-- Interior Hamper Arrangement: Saffron Jar, Dry Fruits, Kashmiri Kahwa Tin -->
+                            <div class="grid grid-cols-3 gap-3 relative z-10 pt-3">
+                                
+                                <!-- Product Jar 1: Kashmir Saffron with Golden Cap -->
+                                <div class="bg-white/95 backdrop-blur-xs rounded-lg p-2.5 border border-amber-900/20 shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                    <div class="h-20 xl:h-24 w-full rounded overflow-hidden mb-1.5 bg-[#fbf6ed]">
+                                        <img src="https://images.unsplash.com/photo-1596647895085-f55a163e7920?auto=format&fit=crop&w=350&q=80" alt="Grade-A Kashmir Saffron" class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="block text-[9px] font-bold text-[#8c6738] uppercase tracking-wider">GI-Tagged</span>
+                                    <h4 class="font-serif font-bold text-gray-900 text-[11px] xl:text-xs leading-tight">Kashmir Saffron</h4>
+                                </div>
+
+                                <!-- Product Jar 2: Handpicked Dry Fruits -->
+                                <div class="bg-white/95 backdrop-blur-xs rounded-lg p-2.5 border border-amber-900/20 shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                    <div class="h-20 xl:h-24 w-full rounded overflow-hidden mb-1.5 bg-[#fbf6ed]">
+                                        <img src="https://images.unsplash.com/photo-1558234551-78c66e2c39e2?auto=format&fit=crop&w=350&q=80" alt="Premium Kashmiri Dry Fruits" class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="block text-[9px] font-bold text-[#8c6738] uppercase tracking-wider">Organic</span>
+                                    <h4 class="font-serif font-bold text-gray-900 text-[11px] xl:text-xs leading-tight">Walnuts &amp; Almonds</h4>
+                                </div>
+
+                                <!-- Product Tin 3: Traditional Shahi Kahwa Tea -->
+                                <div class="bg-white/95 backdrop-blur-xs rounded-lg p-2.5 border border-amber-900/20 shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                    <div class="h-20 xl:h-24 w-full rounded overflow-hidden mb-1.5 bg-[#fbf6ed]">
+                                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=350&q=80" alt="Traditional Shahi Kahwa Tea" class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="block text-[9px] font-bold text-[#8c6738] uppercase tracking-wider">Artisanal</span>
+                                    <h4 class="font-serif font-bold text-gray-900 text-[11px] xl:text-xs leading-tight">Shahi Kahwa Tea</h4>
+                                </div>
+
+                            </div>
+
+                            <!-- Bottom Sill Details: Saffron bowl, scattered nuts & hand-curated tag -->
+                            <div class="mt-3.5 pt-2 border-t border-[#caa98a] flex items-center justify-between text-xs text-[#4a3424]">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+                                    <span class="font-medium text-[11px] text-[#422e1d]">Crafted in Srinagar Valleys</span>
+                                </div>
+                                <span class="font-bold text-sm text-[#0d3429]">₹3,499</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Calligraphy Script Overlay in Alpine Sky (Exact Match) -->
+                <div class="absolute top-8 right-8 xl:right-12 text-right pointer-events-none select-none z-20">
+                    <p class="font-script text-3xl xl:text-[2.75rem] text-[#241c14] leading-[1.08] -rotate-2 font-bold drop-shadow-[0_1px_4px_rgba(255,255,255,0.95)]">
+                        From the<br>
+                        Valleys of Kashmir<br>
+                        <span class="text-[#362719]">to Your Loved Ones</span>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Hero Content (Left Side Grid) -->
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 py-12 lg:py-20">
+            <div class="lg:w-[48%] xl:w-[45%] text-left">
+                
+                <!-- Eyebrow Tag -->
+                <span class="text-[0.68rem] font-bold tracking-[0.26em] text-[#9b7642] uppercase block mb-3.5">
+                    A GIFT FROM KASHMIR
+                </span>
+
+                <!-- Main Headline -->
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-[3.85rem] text-[#0d3429] font-normal leading-[1.08] tracking-tight mb-4">
+                    More Than<br>
+                    Just a Gift
+                </h1>
+
+                <!-- Body Paragraph -->
+                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-7 max-w-sm font-light">
+                    Authentic Kashmiri products, thoughtfully curated to make every occasion special.
+                </p>
+
+                <!-- Dual Action CTAs -->
+                <div class="flex items-center gap-3 mb-9">
+                    <a href="#hampers" class="bg-[#0d3429] hover:bg-[#08241c] text-white text-xs font-medium px-5 py-2.5 rounded transition-all shadow-[0_2px_8px_rgba(13,52,41,0.2)] flex items-center justify-center gap-2 group">
+                        <span>Explore Hampers</span>
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <button onclick="openCustomizerModal()" class="bg-white hover:bg-gray-50 border border-gray-300 text-gray-800 text-xs font-medium px-5 py-2.5 rounded transition-all shadow-2xs hover:border-gray-400">
+                        Customize Your Gift
+                    </button>
+                </div>
+
+                <!-- 4 Circular Icon Pillars Matching UI Reference Exactly -->
+                <div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-md">
+                    <!-- Pillar 1 -->
+                    <div class="flex flex-col items-center text-center group cursor-default">
+                        <div class="w-10 h-10 rounded-full border border-gray-300 group-hover:border-primary group-hover:bg-white flex items-center justify-center text-gray-700 group-hover:text-primary transition-all">
+                            <i class="fa-solid fa-leaf text-xs"></i>
+                        </div>
+                        <span class="text-[0.63rem] font-medium text-gray-700 leading-tight mt-2">
+                            Authentic<br>Products
+                        </span>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="flex flex-col items-center text-center group cursor-default">
+                        <div class="w-10 h-10 rounded-full border border-gray-300 group-hover:border-primary group-hover:bg-white flex items-center justify-center text-gray-700 group-hover:text-primary transition-all">
+                            <i class="fa-solid fa-gift text-xs"></i>
+                        </div>
+                        <span class="text-[0.63rem] font-medium text-gray-700 leading-tight mt-2">
+                            Secure<br>Packaging
+                        </span>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="flex flex-col items-center text-center group cursor-default">
+                        <div class="w-10 h-10 rounded-full border border-gray-300 group-hover:border-primary group-hover:bg-white flex items-center justify-center text-gray-700 group-hover:text-primary transition-all">
+                            <i class="fa-solid fa-truck-fast text-xs"></i>
+                        </div>
+                        <span class="text-[0.63rem] font-medium text-gray-700 leading-tight mt-2">
+                            Pan India<br>Delivery
+                        </span>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="flex flex-col items-center text-center group cursor-default">
+                        <div class="w-10 h-10 rounded-full border border-gray-300 group-hover:border-primary group-hover:bg-white flex items-center justify-center text-gray-700 group-hover:text-primary transition-all">
+                            <i class="fa-solid fa-ribbon text-xs"></i>
+                        </div>
+                        <span class="text-[0.63rem] font-medium text-gray-700 leading-tight mt-2">
+                            Meaningful<br>Gifts
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mobile Only Visual representation -->
+            <div class="mt-8 lg:hidden rounded-xl overflow-hidden shadow-md relative">
+                <img 
+                    src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80" 
+                    alt="Kashmiri Gift Box" 
+                    class="w-full h-56 object-cover"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent flex items-end p-4">
+                    <p class="font-script text-white text-xl">From the Valleys of Kashmir to Your Loved Ones</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 2: SHOP BY CATEGORY (Exact 5 Arched Cards matching reference) -->
+    <section id="categories" class="py-14 sm:py-16 bg-white">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Category Header with View All & Arrow controls -->
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <span class="text-[0.68rem] font-bold tracking-[0.22em] text-accent uppercase block mb-1">EXPLORE OUR COLLECTION</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl text-primary font-normal">Shop by Category</h2>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <a href="#specialties" class="text-xs font-medium text-gray-700 hover:text-primary flex items-center gap-1.5 transition-colors">
+                        <span>View All</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                    <div class="hidden sm:flex items-center gap-2">
+                        <button onclick="scrollCategories('left')" class="w-7 h-7 rounded-full border border-gray-300 hover:border-primary hover:text-primary flex items-center justify-center transition-colors text-xs text-gray-500">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button onclick="scrollCategories('right')" class="w-7 h-7 rounded-full border border-gray-300 hover:border-primary hover:text-primary flex items-center justify-center transition-colors text-xs text-gray-500">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 Arched Cards Grid / Carousel -->
+            <div id="categoryCarousel" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5 overflow-x-auto no-scrollbar pb-2">
+                
+                <!-- Category 1: Saffron -->
+                <div onclick="filterProducts('Saffron')" class="group cursor-pointer flex flex-col bg-[#faf6f0] hover:bg-[#f3ece0] transition-all rounded-xl overflow-hidden text-center p-3 border border-amber-900/5 hover:shadow-sm">
+                    <div class="aspect-square w-full arch-pill overflow-hidden bg-white mb-2.5 shadow-inner flex items-center justify-center">
+                        <img 
+                            src="https://images.unsplash.com/photo-1596647895085-f55a163e7920?auto=format&fit=crop&w=400&q=80" 
+                            alt="Saffron" 
+                            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+                        >
+                    </div>
+                    <h4 class="font-serif font-bold text-gray-900 text-sm mb-0.5">Saffron</h4>
+                    <p class="text-[0.66rem] text-gray-500 font-light">Pure &amp; Premium</p>
+                </div>
+
+                <!-- Category 2: Dry Fruits -->
+                <div onclick="filterProducts('Dry Fruits')" class="group cursor-pointer flex flex-col bg-[#faf6f0] hover:bg-[#f3ece0] transition-all rounded-xl overflow-hidden text-center p-3 border border-amber-900/5 hover:shadow-sm">
+                    <div class="aspect-square w-full arch-pill overflow-hidden bg-white mb-2.5 shadow-inner flex items-center justify-center">
+                        <img 
+                            src="https://images.unsplash.com/photo-1558234551-78c66e2c39e2?auto=format&fit=crop&w=400&q=80" 
+                            alt="Dry Fruits" 
+                            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+                        >
+                    </div>
+                    <h4 class="font-serif font-bold text-gray-900 text-sm mb-0.5">Dry Fruits</h4>
+                    <p class="text-[0.66rem] text-gray-500 font-light">Nutrition in Nature</p>
+                </div>
+
+                <!-- Category 3: Tea & Kahwa -->
+                <div onclick="filterProducts('Tea')" class="group cursor-pointer flex flex-col bg-[#faf6f0] hover:bg-[#f3ece0] transition-all rounded-xl overflow-hidden text-center p-3 border border-amber-900/5 hover:shadow-sm">
+                    <div class="aspect-square w-full arch-pill overflow-hidden bg-white mb-2.5 shadow-inner flex items-center justify-center">
+                        <img 
+                            src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80" 
+                            alt="Tea and Kahwa" 
+                            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+                        >
+                    </div>
+                    <h4 class="font-serif font-bold text-gray-900 text-sm mb-0.5">Tea &amp; Kahwa</h4>
+                    <p class="text-[0.66rem] text-gray-500 font-light">A Taste of Kashmir</p>
+                </div>
+
+                <!-- Category 4: Handicrafts -->
+                <div onclick="filterProducts('Handicrafts')" class="group cursor-pointer flex flex-col bg-[#faf6f0] hover:bg-[#f3ece0] transition-all rounded-xl overflow-hidden text-center p-3 border border-amber-900/5 hover:shadow-sm">
+                    <div class="aspect-square w-full arch-pill overflow-hidden bg-white mb-2.5 shadow-inner flex items-center justify-center">
+                        <img 
+                            src="https://images.unsplash.com/photo-1601004128549-b006a8f1df4b?auto=format&fit=crop&w=400&q=80" 
+                            alt="Handicrafts" 
+                            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+                        >
+                    </div>
+                    <h4 class="font-serif font-bold text-gray-900 text-sm mb-0.5">Handicrafts</h4>
+                    <p class="text-[0.66rem] text-gray-500 font-light">Heritage in Every Detail</p>
+                </div>
+
+                <!-- Category 5: Gift Hampers -->
+                <div onclick="document.getElementById('hampers').scrollIntoView({behavior:'smooth'})" class="group cursor-pointer flex flex-col bg-[#faf6f0] hover:bg-[#f3ece0] transition-all rounded-xl overflow-hidden text-center p-3 border border-amber-900/5 hover:shadow-sm">
+                    <div class="aspect-square w-full arch-pill overflow-hidden bg-white mb-2.5 shadow-inner flex items-center justify-center">
+                        <img 
+                            src="https://images.unsplash.com/photo-1512413914691-89793139316d?auto=format&fit=crop&w=400&q=80" 
+                            alt="Gift Hampers" 
+                            class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+                        >
+                    </div>
+                    <h4 class="font-serif font-bold text-gray-900 text-sm mb-0.5">Gift Hampers</h4>
+                    <p class="text-[0.66rem] text-gray-500 font-light">Curated with Love</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: READY-MADE HAMPERS (Matching Reference Exactly) -->
+    <section id="hampers" class="py-14 sm:py-16 bg-white border-t border-gray-100">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-8 items-start">
+                
+                <!-- Left Intro Column (4 cols) -->
+                <div class="lg:col-span-4 pr-0 lg:pr-6">
+                    <span class="text-[0.68rem] font-bold tracking-[0.22em] text-accent uppercase block mb-2">READY-MADE HAMPERS</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-primary font-normal leading-snug mb-3">
+                        Thoughtfully<br>Curated for Every<br>Occasion
+                    </h2>
+                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6 font-light">
+                        From festive celebrations to corporate gifting, our hampers bring the essence of Kashmir to your special moments.
+                    </p>
+                    <a href="#specialties" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-xs font-semibold px-5 py-2.5 rounded-md transition-all shadow-sm group">
+                        <span>View All Hampers</span>
+                        <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Right 3 Hamper Cards (8 cols) -->
+                <div class="lg:col-span-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
+                    
+                    <!-- Hamper 1: Kashmir Essence Hamper (Bestseller) -->
+                    <div class="bg-white rounded-xl border border-gray-200/90 p-3 shadow-xs hover:shadow-md transition-all relative flex flex-col group">
+                        <!-- Bestseller Tag in warm brown/gold -->
+                        <span class="absolute top-3 left-3 z-10 bg-[#8c6738] text-white text-[10px] font-medium px-2 py-0.5 rounded shadow-xs">
+                            Bestseller
+                        </span>
+                        <!-- Wishlist Heart -->
+                        <button onclick="toggleCardWishlist(this, 'Kashmir Essence Hamper')" class="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-white/90 shadow-xs flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+                            <i class="fa-regular fa-heart text-xs"></i>
+                        </button>
+
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-50 mb-3 relative">
+                            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=500&q=80" alt="Kashmir Essence Hamper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                        <div class="flex flex-col flex-grow">
+                            <h4 class="font-serif font-bold text-gray-900 text-sm mb-1">Kashmir Essence Hamper</h4>
+                            <p class="text-[0.7rem] text-gray-500 mb-4 font-light">A perfect blend of tradition</p>
+                            
+                            <div class="mt-auto flex items-center justify-between pt-1">
+                                <span class="text-sm sm:text-base font-bold text-gray-900">₹1,999</span>
+                                <button onclick="addToCart('Kashmir Essence Hamper', 1999)" class="w-8 h-8 rounded bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-colors shadow-xs" title="Add to Cart">
+                                    <i class="fa-solid fa-cart-shopping text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hamper 2: Royal Kashmiri Hamper -->
+                    <div class="bg-white rounded-xl border border-gray-200/90 p-3 shadow-xs hover:shadow-md transition-all relative flex flex-col group">
+                        <button onclick="toggleCardWishlist(this, 'Royal Kashmiri Hamper')" class="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-white/90 shadow-xs flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+                            <i class="fa-regular fa-heart text-xs"></i>
+                        </button>
+
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-50 mb-3 relative">
+                            <img src="https://images.unsplash.com/photo-1512413914691-89793139316d?auto=format&fit=crop&w=500&q=80" alt="Royal Kashmiri Hamper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                        <div class="flex flex-col flex-grow">
+                            <h4 class="font-serif font-bold text-gray-900 text-sm mb-1">Royal Kashmiri Hamper</h4>
+                            <p class="text-[0.7rem] text-gray-500 mb-4 font-light">Premium delights for loved ones</p>
+                            
+                            <div class="mt-auto flex items-center justify-between pt-1">
+                                <span class="text-sm sm:text-base font-bold text-gray-900">₹2,999</span>
+                                <button onclick="addToCart('Royal Kashmiri Hamper', 2999)" class="w-8 h-8 rounded bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-colors shadow-xs" title="Add to Cart">
+                                    <i class="fa-solid fa-cart-shopping text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hamper 3: Celebration Hamper -->
+                    <div class="bg-white rounded-xl border border-gray-200/90 p-3 shadow-xs hover:shadow-md transition-all relative flex flex-col group">
+                        <button onclick="toggleCardWishlist(this, 'Celebration Hamper')" class="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-white/90 shadow-xs flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+                            <i class="fa-regular fa-heart text-xs"></i>
+                        </button>
+
+                        <div class="aspect-square rounded-lg overflow-hidden bg-gray-50 mb-3 relative">
+                            <img src="https://images.unsplash.com/photo-1601004128549-b006a8f1df4b?auto=format&fit=crop&w=500&q=80" alt="Celebration Hamper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                        <div class="flex flex-col flex-grow">
+                            <h4 class="font-serif font-bold text-gray-900 text-sm mb-1">Celebration Hamper</h4>
+                            <p class="text-[0.7rem] text-gray-500 mb-4 font-light">Make every moment special</p>
+                            
+                            <div class="mt-auto flex items-center justify-between pt-1">
+                                <span class="text-sm sm:text-base font-bold text-gray-900">₹5,499</span>
+                                <button onclick="addToCart('Celebration Hamper', 5499)" class="w-8 h-8 rounded bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-colors shadow-xs" title="Add to Cart">
+                                    <i class="fa-solid fa-cart-shopping text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PANORAMIC STORY BANNER (Exact Match to Dal Lake Landscape) -->
+    <section id="story" class="relative h-[340px] sm:h-[390px] flex items-center justify-center overflow-hidden bg-gray-900">
+        <!-- Landscape Background: Kashmir Dal Lake Houseboats & Snowy Mountains -->
+        <img 
+            src="https://images.unsplash.com/photo-1566837945700-3005d528185b?auto=format&fit=crop&w=2200&q=85" 
+            alt="Kashmir Valley and Houseboats" 
+            class="absolute inset-0 w-full h-full object-cover object-center brightness-90"
+        >
+        <!-- Overlay Gradient Matching the Reference -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-black/60"></div>
+
+        <div class="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div class="max-w-xl text-left text-white">
+                <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal leading-snug mb-2">
+                    Authentic Gifts from<br>the Heart of Kashmir
+                </h2>
+                <p class="text-gray-200 text-xs sm:text-sm font-light leading-relaxed max-w-md">
+                    Bringing you closer to the culture, craftsmanship,<br class="hidden sm:inline"> and natural treasures of Kashmir.
+                </p>
+            </div>
+
+            <!-- Play Video Action Trigger -->
+            <button onclick="openVideoModal()" class="flex flex-col items-center gap-1.5 group cursor-pointer text-white self-center sm:self-auto shrink-0">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-white flex items-center justify-center bg-white/10 backdrop-blur-sm group-hover:scale-105 group-hover:bg-white/20 transition-all shadow-lg">
+                    <i class="fa-solid fa-play text-white text-base sm:text-lg ml-0.5"></i>
+                </div>
+                <span class="text-xs font-normal tracking-wide">Watch Our Story</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE YUWASO (4 Icons with Dividers) -->
+    <section class="py-12 sm:py-14 bg-white border-b border-gray-100">
+        <div class="max-w-[1150px] mx-auto px-4 sm:px-6">
+            <h3 class="text-center text-[0.68rem] font-bold tracking-[0.24em] text-[#8c6738] uppercase mb-9">
+                WHY CHOOSE YUWASO
+            </h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                
+                <!-- Pillar 1 -->
+                <div class="flex flex-col items-center text-center px-4 pt-3 md:pt-0">
+                    <div class="mb-2.5 text-gray-700 hover:text-primary transition-colors">
+                        <i class="fa-solid fa-leaf text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 text-xs sm:text-sm mb-0.5">Authentic</h4>
+                    <p class="text-[0.68rem] text-gray-500">Kashmiri Products</p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="flex flex-col items-center text-center px-4 pt-3 md:pt-0">
+                    <div class="mb-2.5 text-gray-700 hover:text-primary transition-colors">
+                        <i class="fa-regular fa-gem text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 text-xs sm:text-sm mb-0.5">Premium</h4>
+                    <p class="text-[0.68rem] text-gray-500">Quality</p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="flex flex-col items-center text-center px-4 pt-3 md:pt-0">
+                    <div class="mb-2.5 text-gray-700 hover:text-primary transition-colors">
+                        <i class="fa-solid fa-gift text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 text-xs sm:text-sm mb-0.5">Secure</h4>
+                    <p class="text-[0.68rem] text-gray-500">Packaging</p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="flex flex-col items-center text-center px-4 pt-3 md:pt-0">
+                    <div class="mb-2.5 text-gray-700 hover:text-primary transition-colors">
+                        <i class="fa-solid fa-truck-fast text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 text-xs sm:text-sm mb-0.5">Pan India</h4>
+                    <p class="text-[0.68rem] text-gray-500">Delivery</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: KASHMIR'S FINEST (OUR SPECIALTIES) -->
+    <section id="specialties" class="py-14 sm:py-16 bg-white">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header & Filter Tabs -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-4">
+                <div>
+                    <span class="text-[0.68rem] font-bold tracking-[0.22em] text-accent uppercase block mb-1">OUR SPECIALTIES</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl text-primary font-normal">Kashmir's Finest</h2>
+                </div>
+
+                <!-- Filter Tabs matching the image pills -->
+                <div class="flex flex-wrap gap-1.5 text-xs font-normal" id="filterContainer">
+                    <button onclick="filterProducts('All')" class="filter-tab px-3.5 py-1.5 rounded bg-primary text-white transition-all text-xs" data-category="All">All</button>
+                    <button onclick="filterProducts('Saffron')" class="filter-tab px-3.5 py-1.5 rounded bg-[#f4f4f4] text-gray-600 hover:bg-gray-200 transition-all text-xs" data-category="Saffron">Saffron</button>
+                    <button onclick="filterProducts('Dry Fruits')" class="filter-tab px-3.5 py-1.5 rounded bg-[#f4f4f4] text-gray-600 hover:bg-gray-200 transition-all text-xs" data-category="Dry Fruits">Dry Fruits</button>
+                    <button onclick="filterProducts('Tea')" class="filter-tab px-3.5 py-1.5 rounded bg-[#f4f4f4] text-gray-600 hover:bg-gray-200 transition-all text-xs" data-category="Tea">Tea</button>
+                    <button onclick="filterProducts('Handicrafts')" class="filter-tab px-3.5 py-1.5 rounded bg-[#f4f4f4] text-gray-600 hover:bg-gray-200 transition-all text-xs" data-category="Handicrafts">Handicrafts</button>
+                </div>
+            </div>
+
+            <!-- 5 Products Grid Matching Reference Exactly -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4" id="productGrid">
+                
+                <!-- Product 1: Saffron -->
+                <div class="product-item bg-white p-2.5 sm:p-3 rounded-lg border border-gray-200 hover:shadow-md transition-all relative flex flex-col group" data-category="Saffron">
+                    <button onclick="toggleCardWishlist(this, 'Kashmiri Saffron (1g)')" class="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-white/90 shadow-xs flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fa-regular fa-heart text-[11px]"></i>
+                    </button>
+                    <div class="aspect-square rounded bg-gray-50 mb-2.5 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596647895085-f55a163e7920?auto=format&fit=crop&w=400&q=80" alt="Kashmiri Saffron" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <h4 class="font-serif font-bold text-gray-900 text-xs sm:text-[13px] mb-0.5">Kashmiri Saffron (1g)</h4>
+                        <p class="text-[0.66rem] text-gray-500 mb-2.5 font-light">Pure. Authentic. Rare</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-xs sm:text-sm font-bold text-gray-900">₹499</span>
+                            <button onclick="addToCart('Kashmiri Saffron (1g)', 499)" class="w-7 h-7 rounded bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Walnut -->
+                <div class="product-item bg-white p-2.5 sm:p-3 rounded-lg border border-gray-200 hover:shadow-md transition-all relative flex flex-col group" data-category="Dry Fruits">
+                    <button onclick="toggleCardWishlist(this, 'Walnut (Akhrot) 250g')" class="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-white/90 shadow-xs flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fa-regular fa-heart text-[11px]"></i>
+                    </button>
+                    <div class="aspect-square rounded bg-gray-50 mb-2.5 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558234551-78c66e2c39e2?auto=format&fit=crop&w=400&q=80" alt="Walnut (Akhrot)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <h4 class="font-serif font-bold text-gray-900 text-xs sm:text-[13px] mb-0.5">Walnut (Akhrot) 250g</h4>
+                        <p class="text-[0.66rem] text-gray-500 mb-2.5 font-light">Rich in Nutrition</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-xs sm:text-sm font-bold text-gray-900">₹290</span>
+                            <button onclick="addToCart('Walnut (Akhrot) 250g', 290)" class="w-7 h-7 rounded bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Almond -->
+                <div class="product-item bg-white p-2.5 sm:p-3 rounded-lg border border-gray-200 hover:shadow-md transition-all relative flex flex-col group" data-category="Dry Fruits">
+                    <button onclick="toggleCardWishlist(this, 'Almond (Badam) 250g')" class="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-white/90 shadow-xs flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fa-regular fa-heart text-[11px]"></i>
+                    </button>
+                    <div class="aspect-square rounded bg-gray-50 mb-2.5 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=400&q=80" alt="Almond (Badam)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <h4 class="font-serif font-bold text-gray-900 text-xs sm:text-[13px] mb-0.5">Almond (Badam) 250g</h4>
+                        <p class="text-[0.66rem] text-gray-500 mb-2.5 font-light">Premium Quality</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-xs sm:text-sm font-bold text-gray-900">₹280</span>
+                            <button onclick="addToCart('Almond (Badam) 250g', 280)" class="w-7 h-7 rounded bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Cashew -->
+                <div class="product-item bg-white p-2.5 sm:p-3 rounded-lg border border-gray-200 hover:shadow-md transition-all relative flex flex-col group" data-category="Dry Fruits">
+                    <button onclick="toggleCardWishlist(this, 'Kaju (Cashew) 250g')" class="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-white/90 shadow-xs flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fa-regular fa-heart text-[11px]"></i>
+                    </button>
+                    <div class="aspect-square rounded bg-gray-50 mb-2.5 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620619932789-9941a8e97cc9?auto=format&fit=crop&w=400&q=80" alt="Kaju (Cashew)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <h4 class="font-serif font-bold text-gray-900 text-xs sm:text-[13px] mb-0.5">Kaju (Cashew) 250g</h4>
+                        <p class="text-[0.66rem] text-gray-500 mb-2.5 font-light">Handpicked &amp; Fresh</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-xs sm:text-sm font-bold text-gray-900">₹320</span>
+                            <button onclick="addToCart('Kaju (Cashew) 250g', 320)" class="w-7 h-7 rounded bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Kahwa Tea -->
+                <div class="product-item bg-white p-2.5 sm:p-3 rounded-lg border border-gray-200 hover:shadow-md transition-all relative flex flex-col group" data-category="Tea">
+                    <button onclick="toggleCardWishlist(this, 'Kahwa Tea (100g)')" class="absolute top-2.5 right-2.5 z-10 w-6 h-6 rounded-full bg-white/90 shadow-xs flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fa-regular fa-heart text-[11px]"></i>
+                    </button>
+                    <div class="aspect-square rounded bg-gray-50 mb-2.5 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80" alt="Kahwa Tea" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <h4 class="font-serif font-bold text-gray-900 text-xs sm:text-[13px] mb-0.5">Kahwa Tea (100g)</h4>
+                        <p class="text-[0.66rem] text-gray-500 mb-2.5 font-light">A Soothing Tradition</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-xs sm:text-sm font-bold text-gray-900">₹350</span>
+                            <button onclick="addToCart('Kahwa Tea (100g)', 350)" class="w-7 h-7 rounded bg-primary hover:bg-primary-dark text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 7: MAKE IT PERSONAL BANNER (Exact Match) -->
+    <section class="py-8 bg-white px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1360px] mx-auto bg-[#faf6f0] rounded-xl overflow-hidden border border-amber-900/10 flex flex-col md:flex-row items-center relative">
+            
+            <!-- Kashmiri Botanical Leaf Flourish Artwork in corner -->
+            <svg class="absolute right-0 top-0 text-accent/15 w-64 h-64 -translate-y-1/4 translate-x-1/4 pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 5 C52 20 65 25 75 18 C70 30 82 35 95 35 C82 45 85 58 92 68 C78 68 72 80 68 92 C60 82 52 82 50 95 C48 82 40 82 32 92 C28 80 22 68 8 68 C15 58 18 45 5 35 C18 35 30 30 25 18 C35 25 48 20 50 5 Z"/>
+            </svg>
+
+            <!-- Left Gift Box Image -->
+            <div class="w-full md:w-3/12 h-44 sm:h-52 md:h-56">
+                <img 
+                    src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" 
+                    alt="Custom Kashmiri Gift Hamper" 
+                    class="w-full h-full object-cover"
+                >
+            </div>
+
+            <!-- Center Content -->
+            <div class="w-full md:w-5/12 p-5 sm:p-6 text-center md:text-left flex flex-col items-center md:items-start justify-center relative z-10">
+                <h2 class="font-serif text-2xl sm:text-3xl text-primary font-normal mb-1.5">Make It Personal</h2>
+                <p class="text-gray-600 text-xs sm:text-sm mb-4 font-light">
+                    Create a custom gift hamper tailored to your taste and occasion.
+                </p>
+                <button onclick="openCustomizerModal()" class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-md text-xs font-semibold flex items-center gap-2 transition-all shadow-xs group">
+                    <span>Customize Your Gift</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+
+            <!-- Right Cursive Quote Text: "Your Wish. Our Solution." (Exact Match) -->
+            <div class="w-full md:w-4/12 p-5 sm:p-6 flex items-center justify-center md:justify-end relative z-10">
+                <p class="font-script text-3xl sm:text-4xl text-[#8d6738] text-center md:text-right leading-tight md:pr-4 font-medium">
+                    &ldquo;Your Wish.<br>Our Solution.&rdquo;
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER (Exact 5-column layout) -->
+    <footer class="bg-white pt-14 pb-8 border-t border-gray-100">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
+                
+                <!-- Col 1: Brand & Tagline -->
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2 mb-2.5">
+                        <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 28 C 30 15, 52 20, 60 48 C 68 76, 42 100, 32 86 C 24 74, 38 48, 55 35" stroke="#0077b6" stroke-width="10" stroke-linecap="round" fill="none"/>
+                            <path d="M60 48 C 70 20, 92 18, 98 32 C 104 46, 85 70, 68 85 C 55 96, 48 98, 45 92" stroke="#0096c7" stroke-width="9" stroke-linecap="round" fill="none"/>
+                            <circle cx="60" cy="30" r="14" fill="#f77f00"/>
+                        </svg>
+                        <div class="flex flex-col">
+                            <span class="text-base font-extrabold tracking-wider text-[#17548f] leading-none">YUWASO</span>
+                            <span class="text-[0.5rem] text-gray-400 italic">Your Wish, Our Solution.</span>
+                        </div>
+                    </a>
+                    <p class="text-gray-500 text-[11px] leading-relaxed">
+                        Authentic gifts from the valleys of Kashmir. Meaningful products for a happier, more connected world.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-gray-900 text-xs mb-3.5">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-gray-600 font-light">
+                        <li><a href="#" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#specialties" class="hover:text-primary transition-colors">Shop</a></li>
+                        <li><a href="#hampers" class="hover:text-primary transition-colors">Hampers</a></li>
+                        <li><a href="#categories" class="hover:text-primary transition-colors">Categories</a></li>
+                        <li><a href="#story" class="hover:text-primary transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Help -->
+                <div>
+                    <h4 class="font-bold text-gray-900 text-xs mb-3.5">Help</h4>
+                    <ul class="space-y-2 text-xs text-gray-600 font-light">
+                        <li><a href="#" onclick="showToast('Tracking active: Enter your order ID'); return false;" class="hover:text-primary transition-colors">Track Order</a></li>
+                        <li><a href="#" onclick="showToast('Pan-India standard delivery: 3 to 5 business days'); return false;" class="hover:text-primary transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" onclick="showToast('Hassle-free 7-day replacement guarantee'); return false;" class="hover:text-primary transition-colors">Returns &amp; Refunds</a></li>
+                        <li><a href="#" onclick="showToast('FAQs: 100% Authentic GI Tagged Products'); return false;" class="hover:text-primary transition-colors">FAQs</a></li>
+                        <li><a href="#" onclick="showToast('Reach our concierge at care@yuwaso.com'); return false;" class="hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Connect With Us -->
+                <div>
+                    <h4 class="font-bold text-gray-900 text-xs mb-3.5">Connect With Us</h4>
+                    <div class="flex items-center gap-3 text-gray-700">
+                        <a href="#" onclick="showToast('Instagram: @yuwaso_kashmir'); return false;" class="hover:text-primary transition-colors text-base"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" onclick="showToast('Facebook: Yuwaso Kashmir'); return false;" class="hover:text-primary transition-colors text-base"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" onclick="showToast('YouTube: Yuwaso Stories'); return false;" class="hover:text-primary transition-colors text-base"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" onclick="showToast('WhatsApp Support: +91 98765 43210'); return false;" class="hover:text-primary transition-colors text-base"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 5: Newsletter -->
+                <div>
+                    <h4 class="font-bold text-gray-900 text-xs mb-1.5">Newsletter</h4>
+                    <p class="text-xs text-gray-500 font-light mb-3">
+                        Get updates on new products and special offers.
+                    </p>
+                    <form onsubmit="handleNewsletter(event)" class="relative flex items-center">
+                        <input 
+                            type="email" 
+                            id="newsletterEmail"
+                            placeholder="Enter your email" 
+                            required
+                            class="w-full bg-white border border-gray-200 rounded py-2 pl-3 pr-10 text-xs outline-none focus:border-primary text-gray-700"
+                        >
+                        <button type="submit" class="absolute right-1 top-1 bottom-1 px-3 bg-primary hover:bg-primary-dark text-white rounded text-xs transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between text-[0.7rem] text-gray-500">
+                <p>&copy; 2026 YUWASO. All rights reserved.</p>
+                <div class="flex items-center gap-1.5 mt-2 sm:mt-0">
+                    <span>From the Valleys of Kashmir to Your Loved Ones</span>
+                    <i class="fa-solid fa-leaf text-primary text-xs"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- CUSTOM GIFT HAMPER BUILDER MODAL -->
+    <div id="customizerModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-md w-full p-6 relative shadow-2xl border border-gray-100">
+            <button onclick="closeCustomizerModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-lg w-7 h-7 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-5">
+                <span class="text-accent text-[0.68rem] font-bold tracking-widest uppercase">Personalized Hamper</span>
+                <h3 class="font-serif text-2xl text-primary mt-1">Design Your Kashmiri Gift Box</h3>
+                <p class="text-xs text-gray-500 mt-1 font-light">Select handcrafted treasures for your loved one</p>
+            </div>
+
+            <div class="space-y-2.5 mb-5 max-h-56 overflow-y-auto pr-1">
+                <label class="flex items-center justify-between p-2.5 border border-gray-200 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                    <div class="flex items-center gap-2.5">
+                        <input type="checkbox" checked class="accent-primary w-4 h-4">
+                        <span class="text-xs font-medium text-gray-800">Grade A Pampore Saffron (1g)</span>
+                    </div>
+                    <span class="text-xs font-bold text-gray-900">₹499</span>
+                </label>
+                <label class="flex items-center justify-between p-2.5 border border-gray-200 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                    <div class="flex items-center gap-2.5">
+                        <input type="checkbox" checked class="accent-primary w-4 h-4">
+                        <span class="text-xs font-medium text-gray-800">Kashmiri Walnut Kernels (250g)</span>
+                    </div>
+                    <span class="text-xs font-bold text-gray-900">₹290</span>
+                </label>
+                <label class="flex items-center justify-between p-2.5 border border-gray-200 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                    <div class="flex items-center gap-2.5">
+                        <input type="checkbox" checked class="accent-primary w-4 h-4">
+                        <span class="text-xs font-medium text-gray-800">Traditional Shahi Kahwa Tea (100g)</span>
+                    </div>
+                    <span class="text-xs font-bold text-gray-900">₹350</span>
+                </label>
+                <label class="flex items-center justify-between p-2.5 border border-gray-200 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                    <div class="flex items-center gap-2.5">
+                        <input type="checkbox" class="accent-primary w-4 h-4">
+                        <span class="text-xs font-medium text-gray-800">Carved Walnut Wood Keepsake Box</span>
+                    </div>
+                    <span class="text-xs font-bold text-gray-900">₹850</span>
+                </label>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-gray-100 mb-4 text-xs font-medium">
+                <span class="text-gray-600">Estimated Total:</span>
+                <span class="text-base font-bold text-primary">₹1,139</span>
+            </div>
+
+            <button onclick="submitCustomHamper()" class="w-full bg-primary hover:bg-primary-dark text-white py-2.5 rounded-lg font-medium text-xs transition-colors flex items-center justify-center gap-2 shadow-sm">
+                <i class="fa-solid fa-gift"></i> Create &amp; Add Hamper to Cart
+            </button>
+        </div>
+    </div>
+
+    <!-- STORY VIDEO MODAL -->
+    <div id="videoModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-black rounded-xl max-w-2xl w-full p-3 sm:p-4 relative shadow-2xl border border-white/10">
+            <button onclick="closeVideoModal()" class="absolute -top-9 right-0 text-white text-xl hover:text-amber-300">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 flex flex-col items-center justify-center text-center p-6 text-white relative">
+                <img src="https://images.unsplash.com/photo-1566837945700-3005d528185b?auto=format&fit=crop&w=1200&q=80" alt="Video Preview" class="absolute inset-0 w-full h-full object-cover opacity-35">
+                <div class="relative z-10">
+                    <div class="w-14 h-14 rounded-full bg-primary/80 border border-white/40 flex items-center justify-center mx-auto mb-3 animate-pulse">
+                        <i class="fa-solid fa-play text-white text-lg ml-0.5"></i>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl mb-1">Our Kashmir Journey</h3>
+                    <p class="text-xs text-gray-300 max-w-sm font-light">From the saffron fields of Pampore to the walnut orchards of Kupwara.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN / AUTH MODAL -->
+    <div id="authModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-xs w-full p-6 relative shadow-2xl border border-gray-100">
+            <button onclick="closeAuthModal()" class="absolute top-3.5 right-3.5 text-gray-400 hover:text-gray-700 text-lg w-6 h-6 rounded-full flex items-center justify-center hover:bg-gray-100">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-4">
+                <h3 class="font-serif text-xl text-primary">Welcome to Yuwaso</h3>
+                <p class="text-[11px] text-gray-500 mt-1">Sign in to track orders and save your wishlist</p>
+            </div>
+            <form onsubmit="handleLogin(event)" class="space-y-3">
+                <div>
+                    <label class="block text-[10px] font-semibold text-gray-700 mb-1">Mobile / Email</label>
+                    <input type="text" required placeholder="Enter mobile or email" class="w-full border border-gray-200 rounded py-2 px-3 text-xs outline-none focus:border-primary">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-semibold text-gray-700 mb-1">Password</label>
+                    <input type="password" required placeholder="••••••••" class="w-full border border-gray-200 rounded py-2 px-3 text-xs outline-none focus:border-primary">
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white py-2 rounded font-semibold text-xs transition-colors">
+                    Sign In
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION TOAST POPUP -->
+    <div id="toastMessage" class="fixed bottom-6 right-6 z-50 bg-primary text-white text-xs px-4 py-2.5 rounded-lg shadow-xl border border-white/15 transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-2.5 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-amber-300 text-sm"></i>
+        <span id="toastText">Notification update</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        let cartItemsCount = 2;
+        let wishlistItemsCount = 0;
+
+        // Custom toast helper (replaces alerts completely)
+        function showToast(message) {
+            const toast = document.getElementById('toastMessage');
+            const text = document.getElementById('toastText');
+            text.innerText = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            clearTimeout(window.toastTimer);
+            window.toastTimer = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        // Add to Cart
+        function addToCart(itemName, price) {
+            cartItemsCount++;
+            document.getElementById('cartCountBadge').innerText = cartItemsCount;
+            showToast(`Added "${itemName}" (₹${price}) to your cart!`);
+        }
+
+        // Card Wishlist Toggle
+        function toggleCardWishlist(btn, itemName) {
+            const icon = btn.querySelector('i');
+            const isFilled = icon.classList.contains('fa-solid');
+            const badge = document.getElementById('wishlistCount');
+
+            if (!isFilled) {
+                icon.classList.remove('fa-regular', 'text-gray-400');
+                icon.classList.add('fa-solid', 'text-red-500');
+                wishlistItemsCount++;
+                showToast(`Saved "${itemName}" to wishlist!`);
+            } else {
+                icon.classList.remove('fa-solid', 'text-red-500');
+                icon.classList.add('fa-regular', 'text-gray-400');
+                wishlistItemsCount = Math.max(0, wishlistItemsCount - 1);
+                showToast(`Removed "${itemName}" from wishlist.`);
+            }
+
+            if (wishlistItemsCount > 0) {
+                badge.innerText = wishlistItemsCount;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+        }
+
+        // Category carousel horizontal scroller
+        function scrollCategories(direction) {
+            const container = document.getElementById('categoryCarousel');
+            const scrollAmount = direction === 'left' ? -260 : 260;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        // Filter products in Kashmir's Finest section
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product-item');
+            const tabs = document.querySelectorAll('.filter-tab');
+
+            tabs.forEach(tab => {
+                if (tab.getAttribute('data-category') === category) {
+                    tab.classList.remove('bg-[#f4f4f4]', 'text-gray-600');
+                    tab.classList.add('bg-primary', 'text-white');
+                } else {
+                    tab.classList.remove('bg-primary', 'text-white');
+                    tab.classList.add('bg-[#f4f4f4]', 'text-gray-600');
+                }
+            });
+
+            products.forEach(item => {
+                const itemCat = item.getAttribute('data-category');
+                if (category === 'All' || itemCat === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            showToast(`Filtering: ${category}`);
+        }
+
+        // Live search filter
+        document.getElementById('siteSearchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const products = document.querySelectorAll('.product-item');
+            products.forEach(card => {
+                const title = card.querySelector('h4').innerText.toLowerCase();
+                if (title.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Modals Controls
+        function openCustomizerModal() {
+            document.getElementById('customizerModal').classList.remove('hidden');
+        }
+        function closeCustomizerModal() {
+            document.getElementById('customizerModal').classList.add('hidden');
+        }
+        function submitCustomHamper() {
+            closeCustomizerModal();
+            addToCart('Customized Kashmiri Hamper', 1139);
+        }
+
+        function openVideoModal() {
+            document.getElementById('videoModal').classList.remove('hidden');
+        }
+        function closeVideoModal() {
+            document.getElementById('videoModal').classList.add('hidden');
+        }
+
+        function openAuthModal() {
+            document.getElementById('authModal').classList.remove('hidden');
+        }
+        function closeAuthModal() {
+            document.getElementById('authModal').classList.add('hidden');
+        }
+        function handleLogin(e) {
+            e.preventDefault();
+            closeAuthModal();
+            showToast('Welcome back! You are now logged in.');
+        }
+
+        function toggleWishlistModal() {
+            showToast(`Wishlist contains ${wishlistItemsCount} saved treasures.`);
+        }
+        function toggleCartDrawer() {
+            showToast(`Cart has ${cartItemsCount} item(s). Ready for checkout!`);
+        }
+        function toggleMobileNav() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletterEmail').value;
+            showToast(`Thank you! ${email} has been subscribed.`);
+            document.getElementById('newsletterEmail').value = '';
+        }
+    </script>
+</body>
+</html>
